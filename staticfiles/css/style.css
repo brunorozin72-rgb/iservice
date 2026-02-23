@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+}
+
+.navbar {
+    background: #1e40af;
+    color: white;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #2563eb, #1e3a8a);
+    color: white;
+}
+
+.services {
+    padding: 60px 10%;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+.search {
+    padding: 30px 10%;
+    background: #ffffff;
+}
+
+.search form {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.search input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.search button {
+    padding: 10px 20px;
+    background: #1e40af;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ===== DASHBOARD ===== */
+
+.dashboard-container {
+    padding: 60px 10%;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.dashboard-header h2 {
+    font-size: 28px;
+    color: #1e3a8a;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    background: #2563eb;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #1e40af;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.card-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-edit {
+    background: #10b981;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-delete {
+    background: #ef4444;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* ===== SISTEMA DE FORMULÁRIOS ===== */
+
+.form-container {
+    max-width: 500px;
+    margin: 60px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.page-title {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 30px;
+    color: #1e3a8a;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field,
+textarea,
+select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-field:focus,
+textarea:focus,
+select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #1e40af;
+}
+
+/* HERO MODERNO */
+
+.hero-modern {
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-modern h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.hero-modern p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.btn-hero {
+    padding: 12px 28px;
+    background: white;
+    color: #1e3a8a;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-hero:hover {
+    background: #e5e7eb;
+}
+
+/* BUSCA MODERNA */
+
+.search-wrapper {
+    margin-top: -40px;
+    padding: 0 10%;
+}
+
+.search-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.search-card form {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.search-card input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    flex: 1;
+}
+
+.search-card button {
+    padding: 10px 20px;
+    background: #2563eb;
+    color: white;
+    border-radius: 8px;
+    border: none;
+}
+
+/* CARD MODERNO */
+
+.card-modern {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card-modern:hover {
+    transform: translateY(-5px);
+}
+
+.badge {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-name {
+    margin-left: 15px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.logout-form {
+    display: inline;
+}
+
+.logout-btn {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: rgba(255,255,255,0.35);
+}
+
+/* ===== DETALHE SERVIÇO ===== */
+
+.detalhe-container {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.detalhe-card {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+.detalhe-titulo {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #111827;
+}
+
+.detalhe-descricao {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #374151;
+    line-height: 1.6;
+}
+
+.detalhe-info {
+    margin-bottom: 25px;
+    color: #4b5563;
+}
+
+.detalhe-btn {
+    width: 100%;
+}
+
+.voltar-link {
+    display: inline-block;
+    margin-top: 30px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="detalhe-container">
+
+    <div class="detalhe-card">
+
+        <span class="badge">{{ servico.categoria }}</span>
+
+        <h2 class="detalhe-titulo">{{ servico.nome }}</h2>
+
+        <p class="detalhe-descricao">
+            {{ servico.descricao }}
+        </p>
+
+        <div class="detalhe-info">
+            <p><strong>Cidade:</strong> {{ servico.cidade }}</p>
+            <p><strong>Prestador:</strong> {{ servico.usuario.username }}</p>
+        </div>
+
+        <a href="{% url 'contato_prestador' servico.id %}" class="btn-primary detalhe-btn">
+            Entrar em Contato
+        </a>
+
+    </div>
+
+    <a href="/" class="voltar-link">← Voltar</a>
+
+</div>
+
+{% endblock %}

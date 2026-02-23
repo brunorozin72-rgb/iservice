@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="hero-modern">
+    <div class="hero-content">
+        <h1>Conectando você aos melhores profissionais</h1>
+        <p>Plataforma moderna, segura e feita para quem quer qualidade.</p>
+
+        <a href="#busca" class="btn-hero">Encontrar Profissional</a>
+    </div>
+</section>
+
+<section id="busca" class="search-wrapper">
+    <div class="search-card">
+        <form method="GET">
+            <input type="text" name="nome" placeholder="Nome do serviço" value="{{ nome }}">
+            <input type="text" name="categoria" placeholder="Categoria" value="{{ categoria }}">
+            <input type="text" name="cidade" placeholder="Cidade" value="{{ cidade }}">
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+</section>
+
+<section class="services">
+    <h2>Profissionais Disponíveis</h2>
+
+    <div class="cards">
+        {% for servico in servicos %}
+            <a href="{% url 'detalhe_servico' servico.id %}" class="card-link">
+                <div class="card-modern">
+                    <span class="badge">{{ servico.categoria }}</span>
+                    <h3>{{ servico.nome }}</h3>
+                    <p>{{ servico.descricao|truncatechars:80 }}</p>
+                    <small>{{ servico.cidade }}</small>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

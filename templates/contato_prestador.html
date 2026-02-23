@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="detalhe-container">
+    <div class="detalhe-card">
+
+        <h2>Contato de {{ servico.nome }}</h2>
+
+        <p><strong>Prestador:</strong> {{ servico.usuario.username }}</p>
+        <p><strong>Telefone:</strong> {{ perfil.telefone }}</p>
+        <p><strong>WhatsApp:</strong> {{ perfil.whatsapp }}</p>
+        <p><strong>Horário:</strong> {{ perfil.horario_atendimento }}</p>
+        <p><strong>Formas de pagamento:</strong> {{ perfil.formas_pagamento }}</p>
+
+        {% if perfil.whatsapp %}
+            <a href="https://wa.me/{{ perfil.whatsapp }}" target="_blank" class="btn-primary">
+                Chamar no WhatsApp
+            </a>
+        {% endif %}
+
+    </div>
+
+    <a href="/" class="voltar-link">← Voltar</a>
+</div>
+
+{% endblock %}

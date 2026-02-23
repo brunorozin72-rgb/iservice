@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="dashboard-container">
+
+    <div class="dashboard-header">
+        <h2>Meu Painel</h2>
+
+        {% if perfil.tipo == 'prestador' %}
+            <a href="{% url 'criar_servico' %}" class="btn-primary">
+                + Novo Serviço
+            </a>
+        {% endif %}
+    </div>
+
+    {% if perfil.tipo == 'prestador' %}
+
+        <div class="service-grid">
+            {% for servico in servicos %}
+                <div class="service-card">
+                    <h3>{{ servico.nome }}</h3>
+                    <p>{{ servico.descricao|truncatechars:80 }}</p>
+
+                    <div class="card-actions">
+                        <a href="{% url 'editar_servico' servico.id %}" class="btn-edit">
+                            Editar
+                        </a>
+                        <a href="{% url 'excluir_servico' servico.id %}" class="btn-delete">
+                            Excluir
+                        </a>
+                    </div>
+                </div>
+            {% empty %}
+                <p>Você ainda não criou nenhum serviço.</p>
+            {% endfor %}
+        </div>
+
+    {% else %}
+        <p>Você está cadastrado como cliente.</p>
+    {% endif %}
+
+</div>
+
+{% endblock %}

@@ -22,11 +22,12 @@ def cadastro(request):
             password=password
         )
 
-        Perfil.objects.create(
-            tipo=tipo,
-            cidade=cidade,
-            telefone=telefone
-        )
+        # Atualiza o perfil criado automaticamente pelo signal
+        perfil = user.perfil
+        perfil.tipo = tipo
+        perfil.cidade = cidade
+        perfil.telefone = telefone
+        perfil.save()
 
         return redirect('home')
 

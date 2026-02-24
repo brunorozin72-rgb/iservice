@@ -23,7 +23,6 @@ def cadastro(request):
         )
 
         Perfil.objects.create(
-            user=user,
             tipo=tipo,
             cidade=cidade,
             telefone=telefone
